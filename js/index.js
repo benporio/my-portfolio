@@ -4,6 +4,8 @@ try {
     const secondSection = document.getElementById('second-section');
     const thirdSection = document.getElementById('third-section');
     const headerBg = document.getElementsByClassName('illusion-header-background')[0];
+    const sectionLinkNodeList = document.querySelectorAll('section a')
+    
     scrollableContainer.addEventListener('scroll', (event) => {
         const scrollPercentage = scrollableContainer.scrollTop / (scrollableContainer.scrollHeight - scrollableContainer.offsetHeight);
         document.body.style.setProperty(
@@ -28,8 +30,14 @@ try {
             && parseInt(thirdSection.getBoundingClientRect().bottom) >= parseInt(headerBg.getBoundingClientRect().bottom);
         if (isFirstSectionOverlap || isSecondSectionOverlap || isThirdSectionOverlap) {
             headerBg.style.boxShadow = '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)';
+            for (let i = 0; i < sectionLinkNodeList.length; i++) {
+                sectionLinkNodeList.item(i).style.zIndex = 1000;
+            }
         } else {
             headerBg.style.boxShadow = null
+            for (let i = 0; i < sectionLinkNodeList.length; i++) {
+                sectionLinkNodeList.item(i).style.zIndex = 1002;
+            }
         }
     }, false);
 } catch (error) {

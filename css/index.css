@@ -20,7 +20,7 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     background-color: #111111;
     color: white;
     padding: 0%;
@@ -47,10 +47,18 @@ header nav div.nav-item {
 }
 
 main article div.section-item {
-    border: 2px solid #00B3FF;
+    border: 2px solid #89dcff;
     background-color: #2D2D2D;
-    padding: 1em;
+    background-color: rgba(20, 27, 46);
+    padding: 3em;
     margin: 5% 1%;
+    font-size: 1.2em;
+}
+
+main article div.section-item h2 {
+    color: #89dcff;
+    margin: 0;
+    text-align: center;
 }
 
 nav a:link, nav a:active, nav a:visited {
@@ -152,4 +160,36 @@ div.illusion-header-background {
     /* These last 2 properites clean up overshoot weirdness */
     animation-iteration-count: 1;
     animation-fill-mode: both;
+}
+
+.section-content, 
+.section-content p, 
+.section-content table, 
+.section-content li {
+    margin-left: 20px;
+}
+
+.section-content > h3,
+.section-content > table h3 {
+    margin-top: 3em;
+}
+
+table {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+
+table td {
+    vertical-align: top;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.all-text-center * {
+    text-align: center;
 }
