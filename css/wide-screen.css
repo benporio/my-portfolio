@@ -1,0 +1,153 @@
+header nav .container {
+    display: flex;
+    padding: 0px 50px;
+    justify-content: space-between
+}
+
+.header-container {
+    display: flex;
+    padding: 0px 100px;
+    gap: 10px 0px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    animation: headerProgress 1s ease-out;
+}
+
+@keyframes headerProgress {
+    0% {}
+    97% {
+        opacity: 1.0;
+        filter: blur(0);
+        /* background-color: rgb(17, 17, 17, 0.4);
+        box-shadow: 5px 0 5px 10px rgb(17, 17, 17, 0.4);
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px); */
+    }
+    99.6% {
+        opacity: 0;
+        filter: blur(1.7rem);
+        /* background-color: rgb(17, 17, 17, 0.4);
+        box-shadow: 0 0 5px 10px rgb(17, 17, 17, 0.4);
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px); */
+    }
+    100% {
+        opacity: 1.0;
+        filter: blur(0);
+        /* background-color: rgb(17, 17, 17, 0.4);
+        box-shadow: 0 0 5px 10px rgb(17, 17, 17, 0.4);
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px); */
+    }
+}
+
+.header-info {
+    width: 100%;
+    animation: headerInfoProgress 1s ease-out;
+}
+
+@keyframes headerInfoProgress {
+    to {
+        width: 20%;
+        text-align: center;
+    }
+}
+
+.nav-list {
+    width: 100%;
+    animation: headerNavListProgress 1s ease-out;
+}
+
+@keyframes headerNavListProgress {
+    to {
+        width: 80%;
+    }
+}
+
+.profile-container {
+    display: flex;
+    padding: 60px 0px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    animation: headerProfileProgress 1s ease-out;
+}
+
+@keyframes headerProfileProgress {
+    to {
+        padding: 0px;
+    }
+}
+
+.profile-image {
+    margin: 5%;
+}
+
+.profile-image-mask {
+    overflow:hidden;
+    border-radius: 50%;
+    border: 5px solid #00B3FF;
+}
+
+.image-size {
+    width: 300px; 
+    height: 300px; 
+    animation: headerProfileImageProgress 1s ease-out;
+}
+
+@keyframes headerProfileImageProgress {
+    to {
+        width: 80px; 
+        height: 80px; 
+    }
+}
+
+.profile-message {
+    width: 100%;
+    text-align: center;
+    animation: headerProfileMessageProgress 1s ease-out;
+}
+
+@keyframes headerProfileMessageProgress {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+        display: none;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+.profile-info {
+    font-size: 1.8em;
+    animation: headerProfileInfoProgress 1s ease-out;
+}
+
+@keyframes headerProfileInfoProgress {
+    to {
+        font-size: 0.6em;
+        width: 100%;
+    }
+}
+
+header nav div.nav-item {
+    border: 2px solid #00B3FF;
+    background-color: #2D2D2D;
+    font-weight: bold;
+    font-size: 1em;
+    display: inline-block;
+    padding: 1em;
+}
+
+div.illusion-header-background {
+    height: 19%;
+}
+
+.section-anchor {
+    top: -150px;
+}

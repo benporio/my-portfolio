@@ -1,0 +1,155 @@
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: #111111; 
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #2D2D2D;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #00B3FF; 
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #111111;
+    color: white;
+    padding: 0%;
+    margin: 0%;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1002;
+}
+
+.header-dummy {
+    height: 100dvh;
+}
+
+.main-body-container {
+    position: relative; 
+    padding: 10px;
+}
+
+header nav div.nav-item {
+    border-radius: 40px;
+}
+
+main article div.section-item {
+    border: 2px solid #00B3FF;
+    background-color: #2D2D2D;
+    padding: 1em;
+    margin: 5% 1%;
+}
+
+nav a:link, nav a:active, nav a:visited {
+    color: azure;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.item {
+    margin: 5px;
+    padding: 5px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.vertical-1 {
+    padding: 0%;
+    margin: 0%;
+    border-left: 6px solid #00B3FF;
+    height: 100%;
+    position:absolute;
+    left: 5%;
+}
+
+.vertical-2 {
+    border-left: 6px solid #345276;
+    height: 100%;
+    position:absolute;
+    left: 7%;
+}
+
+.vertical-3 {
+    border-left: 6px solid #363636;
+    height: 100%;
+    position:absolute;
+    left: 9%;
+}
+
+div.body-bg-decoration {
+    z-index: 2;
+    opacity: 0.5;
+}
+
+div.main-body {
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    scroll-behavior: smooth;
+}
+
+div.illusion-header-background {
+    position: fixed;
+    top: 0px;
+    z-index: 1001;
+    background-color: #111111;
+    width: 100%;
+}
+
+.section-anchor {
+    position: relative;
+}
+
+.progress {
+    height: 2px;
+    width: 0%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: progress 1s ease-out;
+    z-index: 1003;
+}
+
+@keyframes progress {
+    to {
+        background-color: #00B3FF;
+        width: 100%;
+    }
+}
+
+:root .progress {
+    /* Pause the animation */
+    animation-play-state: paused;
+    /* Bind the animation to scroll */
+    animation-delay: calc(var(--scroll-bs) * -1s);
+    /* These last 2 properites clean up overshoot weirdness */
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+:root header * {
+    /* Pause the animation */
+    animation-play-state: paused;
+    /* Bind the animation to scroll */
+    animation-delay: calc(var(--scroll-header-bs) * -1s);
+    /* These last 2 properites clean up overshoot weirdness */
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
